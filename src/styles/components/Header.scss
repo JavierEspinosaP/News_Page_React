@@ -1,0 +1,15 @@
+@import '../utils/variables.scss';
+
+.header{
+    font-size:20px;
+    display: flex;
+    background-color: $bluegray;
+}
+
+.nav-link{
+    transition: 0.2s
+}
+
+.nav-link:hover{
+    color: $darkblue
+}

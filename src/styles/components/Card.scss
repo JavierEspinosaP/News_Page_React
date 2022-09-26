@@ -1,0 +1,42 @@
+#card {
+    font-size:20px;
+    min-width: 350px;
+    max-width: 350px;
+    margin: 15px;
+    transition:0.5s
+}
+
+#card:hover{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+#cardContainer {
+
+    overflow: hidden;
+
+}
+
+#title {
+    font-weight: bold;
+    max-height: 100px;
+    min-height: 90px;
+    max-width: 350px
+}
+
+#description {
+    font-size: 15px;
+    min-height: 150px;
+    max-width: 350px
+}
+
+#media {
+    max-width: 350px;
+    transition: transform 1s, filter 1s ease-in-out;
+    transform-origin: center center;
+    filter: brightness(80%);
+}
+
+#media:hover{
+    filter: brightness(100%);
+    transform: scale(1.05);
+}
