@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import apiKey from './config/apiKey'
+import apiKey from '../../../config/apiKey'
 import Card from './Card'
 import { v4 as uuidv4 } from 'uuid';
 import Button from '@mui/material/Button';
