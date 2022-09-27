@@ -1,6 +1,9 @@
 En este proyecto se necesitaba crear una página sencilla con React utilizando componentes de clase, que a traves de Context se comunicaran entre sí, toda la maquetación
 está hecha con SASS, y se ha utilizado una librería externa de componentes (Material UI).
 
+Para inicializar el proyecto será necesario crearse una carpeta "config" dentro de la carpera "src" que contenga un archivo "apiKey" en el que se aloje la variable con
+la api key del New York Times.
+
 La página se divide en tres vistas: Home, Formulario de creación de noticia y Lista de noticias.
 
 En la vista Home, sólo se necesitaba un input para guardar el nombre del usuario en la barra de navegación, que por defecto lanzará el nombre "Usuario", también
