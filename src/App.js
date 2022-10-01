@@ -12,14 +12,14 @@ import apiKey from '../src/config/apiKey'
 function App() {
 
   const [user, setUser] = useState("Usuario");
-  let [news, setNews] = useState({})
+  let [news, setNews] = useState([])
 
   useEffect(() => {
     async function fetchNews(){
       try {
     const resp = await fetch(`https://api.nytimes.com/svc/topstories/v2/home.json?api-key=${apiKey}`);
     const data = await resp.json();
-    news = [news]
+    // news = [news]
     const totalNews = [...news,...data.results]
     const flatNews = totalNews.flat(totalNews.length)
     const sliceNews = flatNews.slice(1)
@@ -32,7 +32,7 @@ function App() {
     }
 
 fetchNews()
-
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
   
 
