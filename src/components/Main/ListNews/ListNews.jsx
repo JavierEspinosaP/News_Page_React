@@ -29,7 +29,7 @@ class ListNews extends Component {
 
     let {news} =  this.context
     totalNews = news.flat(news.length)
-    console.log(totalNews);
+
   
     this.setState({newsList: totalNews})
 
