@@ -7,7 +7,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { userContext } from './context/userContext';
 import { newsContext } from './context/newsContext';
 import '../src/styles/styles.scss';
-import apiKey from '../src/config/apiKey'
+// import apiKey from '../src/config/apiKey'
 
 function App() {
 
