@@ -1,5 +1,5 @@
 import './App.css';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from './components/Header';
 import Main from './components/Main';
 import Footer from './components/Footer';
@@ -7,11 +7,34 @@ import { BrowserRouter } from 'react-router-dom';
 import { userContext } from './context/userContext';
 import { newsContext } from './context/newsContext';
 import '../src/styles/styles.scss';
+import apiKey from '../src/config/apiKey'
 
 function App() {
 
   const [user, setUser] = useState("Usuario");
-  const [news, setNews] = useState({})
+  let [news, setNews] = useState({})
+
+  useEffect(() => {
+    async function fetchNews(){
+      try {
+    const resp = await fetch(`https://api.nytimes.com/svc/topstories/v2/home.json?api-key=${apiKey}`);
+    const data = await resp.json();
+    news = [news]
+    const totalNews = [...news,...data.results]
+    const flatNews = totalNews.flat(totalNews.length)
+    const sliceNews = flatNews.slice(1)
+    setNews(sliceNews)        
+      }
+      catch(e){
+        console.log(e);
+      }
+
+    }
+
+fetchNews()
+
+  }, [])
+  
 
   const login = (name) => setUser(name);
   const logout = () => setUser("");
@@ -24,7 +47,7 @@ function App() {
   }
 
   const dataNews = {
-    news, addNew
+    news, addNew, setNews
   }
 
   return (

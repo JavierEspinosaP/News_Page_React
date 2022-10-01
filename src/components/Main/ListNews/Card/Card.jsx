@@ -18,7 +18,9 @@ class Card extends Component {
 
   render() {
     const { title, abstract, url} = this.props.data
+    // const id = this.props.key
     const img = this.props.data.multimedia[0].url
+    // console.log(id);
 
     return <CardM id="card" sx={{ maxWidth: 345 }}>
       <div className="cardContainer">
@@ -41,6 +43,7 @@ class Card extends Component {
     </CardContent>
     <CardActions>
       <Button href={url} target="_blank" size="small">Learn More</Button>
+      <Button onClick={this.props.delete} size="small">Delete New</Button>
     </CardActions>
   </CardM>
   }
