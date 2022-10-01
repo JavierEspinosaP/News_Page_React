@@ -44,3 +44,12 @@ textarea{
     width: 200px
 }
 
+
+@media screen and (max-width: 703px){
+    #img{
+        display:none;
+    }
+    #formContainer{
+        width:270px
+    }
+}

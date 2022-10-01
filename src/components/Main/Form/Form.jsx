@@ -33,7 +33,9 @@ class Form extends Component {
     let data = {title,multimedia,abstract,url}
     let {addNew, news} = this.context //Consume contexto desde JS
     const totalNews = [news, data]
-    addNew(totalNews); //enviar nombre de contexto a login
+    let flatNews = totalNews.flat(totalNews.length)
+    console.log(flatNews);
+    addNew(flatNews); //enviar nombre de contexto a login
     data= {}
     //Vaciar input + state
     this.setState({image:"",title:"", desc:"", url:""})
