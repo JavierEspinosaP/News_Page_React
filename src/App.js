@@ -17,7 +17,8 @@ function App() {
   useEffect(() => {
     async function fetchNews(){
       try {
-    const resp = await fetch(`https://api.nytimes.com/svc/topstories/v2/home.json?api-key=${apiKey}`);
+    console.log(process.env);
+    const resp = await fetch(`https://api.nytimes.com/svc/topstories/v2/home.json?api-key=${process.env.REACT_APP_APIKEY}`);
     const data = await resp.json();
     // news = [news]
     const totalNews = [...news,...data.results]
