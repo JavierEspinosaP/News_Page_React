@@ -1,70 +1,34 @@
-# Getting Started with Create React App
+En este proyecto se necesitaba crear una página sencilla con React utilizando componentes de clase, que a traves de Context se comunicaran entre sí, toda la maquetación
+está hecha con SASS, y se ha utilizado una librería externa de componentes (Material UI).
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Para inicializar el proyecto será necesario crearse una carpeta "config" dentro de la carpera "src" que contenga un archivo "apiKey" en el que se aloje la variable con
+la api key del New York Times.
 
-## Available Scripts
+La página se divide en tres vistas: Home, Formulario de creación de noticia y Lista de noticias.
 
-In the project directory, you can run:
+En la vista Home, sólo se necesitaba un input para guardar el nombre del usuario en la barra de navegación, que por defecto lanzará el nombre "Usuario", también
+se ha añadido un botón de "Logout" que borra el estado de "user" y elimina el nombre.
 
-### `npm start`
+La barra de navegación está configurada con el componente 'Link' para navegar a través de las distintas vistas.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+![Home](https://user-images.githubusercontent.com/103537170/192386273-49ce1b61-1188-4191-bbdb-6ca463fc6caf.png)
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+En la vista de creación de la noticia, encontramos un formulario con los campos para rellenar la información, en el momento de publicar la noticia nos saldrá un
+aviso de que la noticia ha sido guardada correctamente, esto se hace creando un estado para las noticias, que a través del método "spread operator" se unirán a las
+que trae la API del NYT.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![Form](https://user-images.githubusercontent.com/103537170/192386885-3e1e5f35-6866-462c-bc2c-1a9f66a35146.png)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Por último encontramos la vista de todas las noticias, tanto las creadas como las consumidas con la API, he optado por una paginación simple para su visionado más
+cómodo, tanto las tarjetas como los botones son importados de la librería Material UI, los links, llevan a la noticia seleccionada en la página del NYT.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+![news](https://user-images.githubusercontent.com/103537170/192387207-9328a37f-f1fb-44ef-8088-4ecc72a2beb0.png)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Con este proyecto he conseguido asentar los conocimientos sobre la comunicación entre componentes de clase en React, así como el tratamiento de los datos consumidos de
+una API y cómo mostrarlos de una forma correcta, a trabajar con librerías de componentes externos y maquetar correctamente con SASS.
